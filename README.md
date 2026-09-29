@@ -1,8 +1,48 @@
-# ติดตั้ง Mali Cowork (เวอร์ชันทดลอง)
+<p align="center">
+  <img src="./docs/brand/mali-cowork-icon.png" width="128" height="128" alt="Mali Cowork logo: yellow blob with two dark pill-shaped eyes" />
+</p>
 
-ขอบคุณที่ช่วยลองใช้ Mali Cowork 🙏 เวอร์ชันนี้ยังเป็นรุ่นทดลอง อาจเจอบัคได้ ถ้าเจอช่วยแจ้งตาม [วิธีแจ้งปัญหา](#แจ้งปัญหา--ข้อเสนอแนะ) ด้านล่าง
+<h1 align="center">Mali Cowork</h1>
 
-## 1. ดาวน์โหลด
+<p align="center">
+  <strong>Desktop AI — chat and Cowork agents on your machine</strong><br />
+  <strong>แอป AI บนเครื่องคุณ — แชทและให้ agent ทำงานในโฟลเดอร์ที่อนุญาต</strong>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Panudetingai/Mali-Cowork-Releases/releases/latest"><strong>⬇️ Download latest release</strong></a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/Panudetingai/Mali-Cowork-Releases/issues/new/choose"><strong>Report a bug / แจ้งบัค</strong></a>
+  &nbsp;·&nbsp;
+  <a href="./docs/LANDING.md"><strong>Docs / เอกสาร</strong></a>
+</p>
+
+---
+
+This repository is **public** and contains **installers, documentation, and issue tracking only**. Application source code is not published here.
+
+---
+
+## English — Quick start
+
+1. Open **[Releases](https://github.com/Panudetingai/Mali-Cowork-Releases/releases/latest)** and download for your platform:
+   - **macOS** (Apple Silicon + Intel): `Mali Cowork_<version>_universal.dmg`
+   - **Windows 10/11**: `Mali Cowork_<version>_x64-setup.exe`
+2. Install and launch. On first macOS open, use **Right click → Open** if Gatekeeper blocks the app (builds are not notarized yet).
+3. Complete the in-app setup (agents, API keys, or signed-in CLIs).
+4. Use **Chat** for Q&A, or **Cowork** to let an agent change files only in folders you approve.
+
+**Updates:** Newer builds check for updates in-app. Older builds may need a manual download from Releases.
+
+**Help:** [User guide (Thai)](./docs/LANDING.md) · [Feature list](./docs/FEATURES.md) · [Issues](https://github.com/Panudetingai/Mali-Cowork-Releases/issues/new/choose)
+
+---
+
+## ไทย — ติดตั้งและใช้งาน
+
+รายละเอียดขั้นตอนติดตั้ง macOS / Windows, วิธีแจ้งบัค, และคำถามที่พบบ่อย อยู่ในส่วนด้านล่างของ README นี้ (ภาษาไทย) และใน [`docs/LANDING.md`](./docs/LANDING.md)
+
+### 1. ดาวน์โหลด
 
 ไปที่หน้า [**Releases**](https://github.com/Panudetingai/Mali-Cowork-Releases/releases/latest) แล้วเลือกไฟล์ตามเครื่อง:
 
@@ -13,62 +53,61 @@
 
 ต้องใช้ macOS 10.13 ขึ้นไป หรือ Windows 10 ขึ้นไป
 
-## 2. ติดตั้งบน macOS
+### 2. ติดตั้งบน macOS
 
 1. เปิดไฟล์ `.dmg` แล้วลาก **Mali Cowork** ไปใส่โฟลเดอร์ **Applications**
-2. เปิดครั้งแรก: แอปยังไม่ได้ลงทะเบียนกับ Apple ระบบจึงจะเตือนว่า *"ไม่สามารถเปิดได้"* หรือ *"แอปเสียหาย"* ไม่ต้องตกใจ ให้ทำวิธีใดวิธีหนึ่ง:
-
-   **วิธี A — ผ่านหน้าตั้งค่า (แนะนำ)**
-   1. เปิดแอปหนึ่งครั้ง แล้วกด **Done / ยกเลิก** ที่หน้าต่างเตือน
-   2. ไปที่ **System Settings → Privacy & Security**
-   3. เลื่อนลงไปจะเห็น *"Mali Cowork was blocked…"* กด **Open Anyway** แล้วใส่รหัสผ่านเครื่อง
-
-   **วิธี B — ผ่าน Terminal** (ใช้เมื่อขึ้นว่า "แอปเสียหาย")
-   เปิดแอป **Terminal** แล้ววางคำสั่งนี้ กด Enter:
+2. เปิดครั้งแรก: แอปยังไม่ได้ลงทะเบียนกับ Apple ระบบจึงอาจเตือน — ใช้ **คลิกขวา → Open** หรือ **System Settings → Privacy & Security → Open Anyway**
+3. ถ้าขึ้นว่าแอปเสียหาย รันใน Terminal:
 
    ```sh
    xattr -cr "/Applications/Mali Cowork.app"
    ```
 
-   จากนั้นเปิดแอปได้ตามปกติ
+4. ครั้งแรกที่บันทึก API key macOS จะถามรหัสผ่าน Keychain — กด **Always Allow** ได้
 
-3. ครั้งแรกที่บันทึก API key macOS จะถามรหัสผ่านเพื่อเข้าถึง **Keychain** ให้ใส่รหัสผ่านแล้วกด **Always Allow** (key จะถูกเก็บใน Keychain ของเครื่องคุณเท่านั้น) หลังอัปเดตแอปแต่ละเวอร์ชันอาจถามอีกหนึ่งครั้ง
-
-## 3. ติดตั้งบน Windows
+### 3. ติดตั้งบน Windows
 
 1. ดับเบิลคลิก `…_x64-setup.exe`
-2. ถ้าขึ้นหน้าจอสีน้ำเงิน *"Windows protected your PC"* ให้กด **More info → Run anyway**
-3. ทำตามขั้นตอนติดตั้งจนเสร็จ แล้วเปิดจากเมนู Start
+2. ถ้า SmartScreen ขึ้น ให้กด **More info → Run anyway**
+3. เปิดจากเมนู Start หลังติดตั้งเสร็จ
 
-## 4. เริ่มใช้งานครั้งแรก
+### 4. เริ่มใช้งาน
 
-1. เปิดแอปแล้วจะมี **หน้าตั้งค่าเริ่มต้น** ช่วยตรวจและติดตั้ง AI agent ที่ต้องใช้ (เช่น OpenCode) ทำตามทีละขั้นได้เลย
-2. ใส่ API key ของผู้ให้บริการที่มี (เช่น OpenRouter, OpenAI, Anthropic) ที่ **Settings → Models → Cloud providers** หรือจะใช้ agent ที่ล็อกอินไว้แล้วในเครื่อง (Codex, Cursor ฯลฯ) ก็ได้
-3. เลือกโหมด:
-   - **Chat** — ถามตอบ เขียนงานทั่วไป
-   - **Cowork** — ให้ agent อ่าน/แก้ไฟล์ **เฉพาะในโฟลเดอร์ที่คุณอนุญาต** ทุกครั้งที่แก้ไฟล์สามารถกดย้อนกลับได้
+1. ทำตาม **หน้าตั้งค่าเริ่มต้น** ในแอป
+2. ใส่ API key ที่ **Settings → Models** หรือใช้ agent ที่ sign in ไว้แล้ว (OpenCode, Codex, Cursor ฯลฯ)
+3. **Chat** = ถามตอบ · **Cowork** = agent แก้ไฟล์เฉพาะโฟลเดอร์ที่อนุญาต
 
-> ⚠️ ช่วงทดลอง แนะนำให้ใช้ Cowork กับโฟลเดอร์ที่มีสำรองไว้ หรือเป็น git repo
+### แจ้งปัญหา / ข้อเสนอแนะ
 
-## แจ้งปัญหา / ข้อเสนอแนะ
+ใช้ [**Issues → New issue**](https://github.com/Panudetingai/Mali-Cowork-Releases/issues/new/choose) — มีเทมเพลต **Bug** และ **Feature request**
 
-แจ้งได้ที่หน้า [**Issues**](https://github.com/Panudetingai/Mali-Cowork-Releases/issues) (กด [**New issue**](https://github.com/Panudetingai/Mali-Cowork-Releases/issues/new/choose)) โดยใส่ข้อมูลเหล่านี้:
+- เวอร์ชันแอป, OS, model/agent ที่ใช้
+- ขั้นตอนที่ทำ และสิ่งที่เกิดขึ้น
+- ภาพหน้าจอหรือข้อความ error
 
-- เครื่องและเวอร์ชัน OS (เช่น macOS 15 / M2, Windows 11)
-- เวอร์ชันแอป
-- ทำอะไรอยู่ แล้วเกิดอะไรขึ้น / คาดว่าควรเป็นแบบไหน
-- model หรือ agent ที่ใช้ (เช่น OpenRouter / Claude, OpenCode)
-- ภาพหน้าจอ หรือข้อความ error (คัดลอกมาทั้งข้อความได้ยิ่งดี)
+> 🔒 **ห้ามแปะ API key, รหัสผ่าน หรือไฟล์ลับใน Issue**
 
-> 🔒 **ห้ามแปะ API key, รหัสผ่าน หรือไฟล์งานที่เป็นความลับลงใน Issue** หน้า Issues เปิดให้ทุกคนเห็น ถ้าจำเป็นต้องส่งข้อมูลส่วนตัว ให้ส่งมาทางแชทส่วนตัวแทน
+### เอกสารเพิ่มเติม
 
-## ถอนการติดตั้ง
+| เอกสาร | เนื้อหา |
+|--------|---------|
+| [LANDING.md](./docs/LANDING.md) | ภาพรวม ความปลอดภัย FAQ |
+| [FEATURES.md](./docs/FEATURES.md) | รายการฟีเจอร์ |
+| [docs/README.md](./docs/README.md) | ดัชนีเอกสาร (รวม architecture notes สำหรับผู้สนใจเทคนิค) |
 
-- **macOS:** ลาก Mali Cowork จาก Applications ไปถังขยะ
-- **Windows:** Settings → Apps → Mali Cowork → Uninstall
+### อัปเดตและถอนการติดตั้ง
 
-## อัปเดต
+- **อัปเดต:** แอปเวอร์ชันใหม่ตรวจอัปเดตอัตโนมัติ; ถ้าไม่มี ให้ดาวน์โหลดจาก Releases แล้วติดตั้งทับ
+- **ถอน:** macOS — ลากออกจาก Applications · Windows — Settings → Apps → Uninstall
 
-แอปจะเช็กเวอร์ชันใหม่เองหลังเปิดแอปและทุก ๆ 6 ชั่วโมง ถ้ามีจะขึ้นหน้าต่างให้กด **Update and restart** ไม่ต้องดาวน์โหลดใหม่เอง
+---
 
-> เวอร์ชัน 0.1.2 หรือเก่ากว่ายังไม่มีระบบอัปเดตอัตโนมัติ ให้ดาวน์โหลดเวอร์ชันล่าสุดจากหน้า Releases มาติดตั้งทับหนึ่งครั้ง
+## Repository scope
+
+| มีใน repo นี้ | ไม่มีใน repo นี้ |
+|---------------|------------------|
+| GitHub Releases (`.dmg`, `.exe`) | Source code |
+| User & product documentation | Private keys / `.env` |
+| Bug & feature issue templates | Internal CI secrets |
+
+Releases are published here automatically when the private development repository tags a version.
